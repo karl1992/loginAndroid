@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"/>
+
+    <include
+        layout="@layout/seacher_edit"
+        ></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f8f8f8" >
+
+        <se.emilsjolander.stickylistheaders.StickyListHeadersListView
+            android:id="@+id/all_city_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:cacheColorHint="#00000000"
+            android:divider="#c5c5c5"
+            android:dividerHeight="1dp"
+            android:scrollingCache="false"
+            android:visibility="visible"/>
+
+        <ListView
+            android:id="@+id/search_city_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="2dp"
+            android:cacheColorHint="#00000000"
+            android:divider="#c5c5c5"
+            android:dividerHeight="1dp"
+            android:scrollingCache="false"
+            android:visibility="gone" />
+
+
+
+        <LinearLayout
+            android:id="@+id/nodata_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+            <TextView
+                android:id="@+id/nodata_hint"
+                style="@style/style_18_666666"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="暂无数据"
+                />
+
+
+            <Button
+                android:id="@+id/btn_fresh"
+                style="@style/style_18_ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:paddingTop="5dp"
+                android:background="@drawable/corners_gray_bg"
+                android:text="重新加载" />
+
+
+        </LinearLayout>
+        <!--<xzh.com.listviewhover.view.SideBar
+            android:id="@+id/list_sidebar"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:background="@color/c1"
+            android:layout_alignParentRight="true" />-->
+    </RelativeLayout>
+
+</LinearLayout>

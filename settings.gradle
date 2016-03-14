@@ -1,0 +1,2 @@
+include ':app',":hover"
+project(':hover').projectDir = new File('Libaray/hover')
